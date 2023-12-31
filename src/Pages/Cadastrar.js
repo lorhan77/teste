@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import Logo from '../assets/Images/Logo.png'
+import UsuariosServices from "../services/UsuariosServices";
 
 function Cadastrar() {
+    const [formData, setFormData] = useState();
+
     return (
         <div className='w-full flex bg-[#58D5D3]/20'>
             <div className='w-1/5' />
@@ -36,9 +39,9 @@ function Cadastrar() {
                                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#58D5D3] sm:max-w-md">
                                                 <input
                                                     type="text"
-                                                    name="username"
-                                                    id="username"
-                                                    autoComplete="username"
+                                                    name="nome"
+                                                    id="nome"
+                                                    autoComplete="nome"
                                                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                                     placeholder="Nome"
                                                 />
@@ -55,9 +58,9 @@ function Cadastrar() {
                                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#58D5D3] sm:max-w-md">
                                                 <input
                                                     type="text"
-                                                    name="username"
-                                                    id="username"
-                                                    autoComplete="username"
+                                                    name="sobrenome"
+                                                    id="sobrenome"
+                                                    autoComplete="sobrenome"
                                                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                                     placeholder="Sobrenome "
                                                 />
@@ -74,9 +77,9 @@ function Cadastrar() {
                                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#58D5D3] sm:max-w-md">
                                                 <input
                                                     type="text"
-                                                    name="username"
-                                                    id="username"
-                                                    autoComplete="username"
+                                                    name="email"
+                                                    id="email"
+                                                    autoComplete="email"
                                                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                                     placeholder="Email"
                                                 />
@@ -93,9 +96,9 @@ function Cadastrar() {
                                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#58D5D3] sm:max-w-md">
                                                 <input
                                                     type="text"
-                                                    name="username"
-                                                    id="username"
-                                                    autoComplete="username"
+                                                    name="senha"
+                                                    id="senha"
+                                                    autoComplete="senha"
                                                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                                     placeholder="Senha"
                                                 />
@@ -112,9 +115,9 @@ function Cadastrar() {
                                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#58D5D3] sm:max-w-md">
                                                 <input
                                                     type="text"
-                                                    name="username"
-                                                    id="username"
-                                                    autoComplete="username"
+                                                    name="nivelDeAcesso"
+                                                    id="nivelDeAcesso"
+                                                    autoComplete="nivelDeAcesso"
                                                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                                     placeholder="Nível de Acesso"
                                                 />
